@@ -1,0 +1,7 @@
+@import './util/colors.css';
+
+:root {
+  --font-display: system-ui, sans-serif;
+  --font-mono: monospace;
+  --font-serif: serif;
+}
