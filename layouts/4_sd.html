@@ -5,14 +5,77 @@
     <title>Race Layout, 4 Standard</title>
 
     <link rel="stylesheet" href="../style/layout.css">
-    <script src="./bl-bingo_4.js"></script>
+    <script src="./4_sd.js"></script>
 
     <style>
+      .content {
+        background-color: #222;
+      }
+
+      .omni {
+        width: 1600px;
+        height: 55px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #922;
+        border-top: 1px solid #000;
+      }
+
+      ff-sized-box {
+        position: absolute;
+        background-color: #777;
+      }
+
+      #game1 {
+        top: -1px;
+        left: -1px;
+      }
+
+      #game2 {
+        bottom: 55px;
+        left: -1px;
+      }
+
+      #game3 {
+        top: -1px;
+        right: -1px;
+      }
+
+      #game4 {
+        bottom: 55px;
+        right: -1px;
+      }
+
+
+      #center-column {
+        position: absolute;
+        left: 563px;
+        right: 563px;
+        width: 474px;
+        height: calc(100% - 55px);
+        background-color: #444;
+      }
     </style>
   </head>
 
   <body>
     <div class="layout">
+      <div class="content">
+        <ff-sized-box id="game1" width="562" height="421"></ff-sized-box>
+        <ff-sized-box id="game2" width="562" height="421"></ff-sized-box>
+
+        <div id="center-column">
+        </div>
+
+
+        <ff-sized-box id="game3" width="562" height="421"></ff-sized-box>
+        <ff-sized-box id="game4" width="562" height="421"></ff-sized-box>
+      </div>
+
+      <div class="omni">
+      </div>
     </div>
   </body>
 </html>
