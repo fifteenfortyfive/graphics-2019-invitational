@@ -1,7 +1,46 @@
 @import './util/colors.css';
 
 :root {
-  --font-display: system-ui, sans-serif;
-  --font-mono: monospace;
-  --font-serif: serif;
+  --dark-gray: #262627;
+  --border-gray: #19191a;
+  --gridline-gray: #090909;
+  --primary-red: #d64848;
+  --hover-red: #c02b2b;
+  --white: #fcfcfd;
+  --muted-gray: #b3b3b3;
+
+  --blue: #56a3d8;
+  --gray: #979c9f;
+  --pink: #dd8eb4;
+  --yellow: #f0c566;
+  /*--purple: #8c5eac;*/
+  --purple: #7e519e;
+  --green: #6fa56b;
+  --red: #d46060;
+  --orange: #df9753;
+
+  /*--spyro: #8c5eac;*/
+  --spyro: #7e519e;
+  --crash: #df9753;
+  --rare:  #f0c566;
+  --mario: #d46060;
+
+  --1u: 4px;
+  --2u: 8px;
+  --4u: 16px;
+  --6u: 24px;
+  --8u: 32px;
+
+  --border-primary: 2px solid var(--primary-red);
+  --border-radius: 0px;
+
+  --shadow-primary: 0px 0px 4px var(--primary-red);
+
+  --font-display: 'Skolar Sans Latin';
+  --font-header: 'Proxima Nova';
+  --font-mono: 'Lato';
+  --font-brand: 'Cortado';
+
+
+  --primary-red: var(--spyro);
 }

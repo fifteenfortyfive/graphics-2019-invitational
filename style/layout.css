@@ -1,5 +1,5 @@
-@import './theme.css';
 @import 'normalize.css';
+@import './theme.css';
 
 .layout {
   position: absolute;
@@ -9,6 +9,5 @@
   box-sizing: border-box;
 
   font-family: var(--font-display);
-
-  background: var(--bl-gradient-background);
+  background: var(--dark-gray);
 }

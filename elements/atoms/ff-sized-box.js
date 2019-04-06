@@ -20,12 +20,6 @@ export class FFSizedBox extends LitElement {
         .box {
           width: ${this.width}px;
           height: ${this.height}px;
-          background: var(--bl-color-background);
-
-          border-width: 1px;
-          border-style: solid;
-          border-image: var(--bl-gradient-secondary);
-          border-image-slice: 1;
         }
       </style>
 

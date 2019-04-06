@@ -4,6 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Race Layout, 4 Standard</title>
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
     <link rel="stylesheet" href="../style/layout.css">
     <script src="./4_sd.js"></script>
 
@@ -12,50 +14,152 @@
         background-color: #222;
       }
 
-      .omni {
-        width: 1600px;
-        height: 55px;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: #922;
-        border-top: 1px solid #000;
-      }
-
       ff-sized-box {
         position: absolute;
-        background-color: #777;
+        background-color: #000;
+        border: var(--border-primary);
+        z-index: 10;
       }
 
       #game1 {
-        top: -1px;
-        left: -1px;
+        top: -2px;
+        left: -2px;
       }
 
       #game2 {
-        bottom: 55px;
-        left: -1px;
+        bottom: -2px;
+        left: -2px;
       }
 
       #game3 {
-        top: -1px;
-        right: -1px;
+        top: -2px;
+        right: -2px;
       }
 
       #game4 {
-        bottom: 55px;
-        right: -1px;
+        bottom: -2px;
+        right: -2px;
       }
 
 
       #center-column {
         position: absolute;
-        left: 563px;
-        right: 563px;
-        width: 474px;
-        height: calc(100% - 55px);
-        background-color: #444;
+        left: 600px;
+        right: 600px;
+        width: 400px;
+        height: 100%;
+      }
+
+
+      .logo-container {
+        position: absolute;
+        top: 220px;
+        margin: auto;
+        height: 280px;
+        width: 400px;
+      }
+
+      ff-logo {
+        padding-top: 80px;
+        z-index: 100;
+      }
+
+      .logo-subtitle {
+        color: var(--white);
+        font-family: var(--font-header);
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        text-shadow: 0 2px 4px #000;
+        width: 100%;
+        text-align: center;
+        display: block;
+      }
+
+      .game-description {
+        position: absolute;
+        top: 440px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin: auto;
+        height: 280px;
+        width: 400px;
+      }
+
+      .game-title {
+        display: block;
+        color: var(--white);
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 24px;
+        text-shadow: 0 2px 4px #000;
+        width: 100%;
+        text-align: center;
+      }
+
+      .game-category {
+        display: block;
+        margin-top: 6px;
+        color: var(--white);
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 20px;
+        text-shadow: 0 2px 4px #000;
+        width: 100%;
+        text-align: center;
+      }
+
+      .commentary {
+        position: absolute;
+        bottom: 20px;
+        margin: auto;
+        width: 400px;
+
+        display: block;
+        margin-top: 6px;
+        color: var(--white);
+        font-family: var(--font-display);
+        font-weight: 500;
+        font-size: 18px;
+        text-shadow: 0 2px 4px #000;
+        width: 100%;
+        text-align: center;
+      }
+
+      ff-nameplate {
+        --color: var(--primary-red);
+        height: 75px;
+        position: absolute;
+        width: 100%;
+      }
+
+      #nameplate1 {
+        top: 50px;
+        left: -1px;
+      }
+
+      #nameplate2 {
+        top: 160px;
+        right: -1px;
+      }
+
+      #nameplate3 {
+        top: 620px;
+        left: -1px;
+      }
+
+      #nameplate4 {
+        top: 730px;
+        right: -1px;
+      }
+
+      ff-timer-box {
+        --color: var(--primary-red);
+        position: absolute;
+        top: 522px;
+        width: 320px;
+        margin: 0 40px;
       }
     </style>
   </head>
@@ -63,19 +167,64 @@
   <body>
     <div class="layout">
       <div class="content">
-        <ff-sized-box id="game1" width="562" height="421"></ff-sized-box>
-        <ff-sized-box id="game2" width="562" height="421"></ff-sized-box>
+        <ff-sized-box id="game1" width="599" height="449"></ff-sized-box>
+        <ff-sized-box id="game2" width="599" height="449"></ff-sized-box>
 
         <div id="center-column">
+          <ff-nameplate
+            id="nameplate1"
+            class="nameplate--left"
+            name="Gazco"
+            twitch="Gazco41"
+            pb="1:25:46"
+          ></ff-nameplate>
+          <ff-nameplate
+            id="nameplate2"
+            class="nameplate--right"
+            name="basoom"
+            twitch="ssbmStuff"
+            pb="1:22:43"
+          ></ff-nameplate>
+
+          <div class="logo-container">
+            <ff-logo></ff-logo>
+            <span class="logo-subtitle">Invitational Series</span>
+          </div>
+
+          <div class="game-description">
+            <span class="game-title">Spyro the Dragon</span>
+            <span class="game-category">120%</span>
+          </div>
+
+          <ff-timer-box></ff-timer-box>
+
+          <ff-nameplate
+            id="nameplate3"
+            class="nameplate--left"
+            name="hummeldon"
+            twitch="hummeldon"
+            pb="1:27:48"
+          ></ff-nameplate>
+          <ff-nameplate
+            id="nameplate4"
+            class="nameplate--right"
+            name="Valen"
+            twitch="Valen_the_Dragon"
+            pb="1:28:28"
+          ></ff-nameplate>
+
+          <div class="commentary">
+            <span class="commentators">
+              Commentators: Yeswally1, Dayomaan
+            </span>
+          </div>
         </div>
 
-
-        <ff-sized-box id="game3" width="562" height="421"></ff-sized-box>
-        <ff-sized-box id="game4" width="562" height="421"></ff-sized-box>
+        <ff-sized-box id="game3" width="599" height="449"></ff-sized-box>
+        <ff-sized-box id="game4" width="599" height="449"></ff-sized-box>
       </div>
 
-      <div class="omni">
-      </div>
+      <!-- <ff-omnibar></ff-omnibar> -->
     </div>
   </body>
 </html>
