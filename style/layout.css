@@ -9,5 +9,5 @@
   box-sizing: border-box;
 
   font-family: var(--font-display);
-  background: var(--dark-gray);
+  background: #000;
 }
