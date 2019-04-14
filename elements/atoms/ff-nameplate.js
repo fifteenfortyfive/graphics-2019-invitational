@@ -97,6 +97,27 @@ export class FFNameplate extends LitElement {
         :host(.nameplate--right) .nameplate {
           right: -1px;
         }
+
+        :host(.nameplate--large) .nameplate {
+          height: 90px;
+        }
+
+        :host(.nameplate--large) .nameplate__name {
+          display: block;
+          width: 100%;
+          height: 52px;
+          padding: 12px;
+          box-shadow: inset 0 0 42px var(--color);
+          text-shadow: 0 1px 0.3em var(--dark-gray);
+          text-align: center;
+          font-size: 28px;
+        }
+
+        :host(.nameplate--large) .nameplate-info__cell {
+          height: 37px;
+          padding: 8px 8px;
+          font-size: 18px;
+        }
       </style>
 
       <div class="nameplate">

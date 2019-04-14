@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Race Layout, 4 Standard</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../style/layout.css">
+    <script src="./4_sd.js"></script>
+
+    <style>
+      .content {
+        background-color: #222;
+      }
+
+      ff-sized-box {
+        position: absolute;
+        background-color: #000;
+        border: var(--border-primary);
+        z-index: 10;
+      }
+
+      #game1 {
+        top: 140px;
+        left: -2px;
+      }
+
+      #game2 {
+        top: 140px;
+        right: -2px;
+      }
+
+      #top-row {
+        position: absolute;
+        top: 10px;
+        width: 100%;
+        height: 118px;
+      }
+
+      #bottom-row {
+        position: absolute;
+        top: 592px;
+        width: 100%;
+        height: 348px;
+      }
+
+      .logo-container {
+        position: absolute;
+        left: 600px;
+        top: 30px;
+        margin: auto;
+        height: 280px;
+        width: 400px;
+      }
+
+      ff-logo {
+        padding-top: 6px;
+        z-index: 100;
+      }
+
+      .logo-subtitle {
+        color: var(--white);
+        font-family: var(--font-header);
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        text-shadow: 0 2px 4px #000;
+        width: 100%;
+        text-align: center;
+        display: block;
+      }
+
+      .game-description {
+        position: absolute;
+        top: 42px;
+        left: 520px;
+        right: 520px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        height: 280px;
+        width: 560px;
+        text-align: center;
+      }
+
+      .game-title {
+        color: var(--white);
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 30px;
+        text-shadow: 0 2px 4px #000;
+        width: 100%;
+      }
+
+      .game-category {
+        margin-top: 6px;
+        color: var(--white);
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 30px;
+        text-shadow: 0 2px 4px #000;
+        width: 100%;
+      }
+
+      .commentary {
+        position: absolute;
+        top: 78px;
+        margin: auto;
+        width: 400px;
+
+        display: block;
+        margin-top: 6px;
+        color: var(--white);
+        font-family: var(--font-display);
+        font-weight: 500;
+        font-size: 18px;
+        text-shadow: 0 2px 4px #000;
+        width: 100%;
+        text-align: center;
+      }
+
+      ff-nameplate {
+        --color: var(--primary-red);
+        height: 90px;
+        position: absolute;
+        width: 480px;
+      }
+
+      #nameplate1 {
+        top: 60px;
+        left: 95px;
+      }
+
+      #nameplate2 {
+        top: 60px;
+        right: 95px;
+      }
+
+      ff-timer-box {
+        --color: var(--primary-red);
+        position: absolute;
+        top: 182px;
+        left: 640px;
+        width: 320px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="layout">
+      <div class="content">
+        <ff-sized-box id="game1" width="799" height="449"></ff-sized-box>
+        <ff-sized-box id="game2" width="799" height="449"></ff-sized-box>
+
+        <div id="top-row">
+          <div class="game-description">
+            <span class="game-title">Super Mario Galaxy &ndash; </span>
+            <span class="game-category">120 Star</span>
+          </div>
+
+          <div class="commentary">
+            <span class="commentators">
+              Commentators: Alaeus, iMartz3
+            </span>
+          </div>
+        </div>
+
+        <div id="bottom-row">
+          <ff-nameplate
+            id="nameplate1"
+            class="nameplate--left nameplate--large"
+            name="HardcoreGaming"
+            twitch="HardcoreGaming07"
+            pb="5:37:46"
+          ></ff-nameplate>
+          <ff-nameplate
+            id="nameplate2"
+            class="nameplate--right nameplate--large"
+            name="MutantsAbyss"
+            twitch="MutantsAbyss"
+            pb="5:49:43"
+          ></ff-nameplate>
+
+          <ff-timer-box></ff-timer-box>
+
+          <div class="logo-container">
+            <ff-logo></ff-logo>
+            <span class="logo-subtitle">Invitational Series</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- <ff-omnibar></ff-omnibar> -->
+    </div>
+  </body>
+</html>
