@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
     <link rel="stylesheet" href="../style/layout.css">
-    <script src="./4_sd.js"></script>
+    <script src="./2_sd.js"></script>
 
     <style>
       .content {
@@ -22,32 +22,33 @@
       }
 
       #game1 {
-        top: 130px;
+        top: 140px;
         left: -2px;
       }
 
       #game2 {
-        top: 130px;
+        top: 140px;
         right: -2px;
       }
 
       #top-row {
         position: absolute;
-        top: 0px;
+        top: 2px;
         width: 100%;
-        height: 148px;
+        height: 118px;
       }
 
       #bottom-row {
         position: absolute;
-        top: 740px;
+        top: 741px;
         width: 100%;
-        height: 180px;
+        height: 159px;
       }
 
       .logo-container {
         position: absolute;
-        left: 430px;
+        left: 370px;
+        top: 3px;
         margin: auto;
         height: 280px;
         width: 400px;
@@ -74,38 +75,37 @@
       .game-description {
         position: absolute;
         top: 42px;
-        left: 860px;
+        left: 800px;
         text-transform: uppercase;
         letter-spacing: 1.5px;
-        margin: auto;
         height: 280px;
-        width: 280px;
+        width: 560px;
+        text-align: center;
       }
 
       .game-title {
-        display: block;
         color: var(--white);
         font-family: var(--font-display);
         font-weight: 700;
-        font-size: 24px;
+        font-size: 30px;
         text-shadow: 0 2px 4px #000;
         width: 100%;
       }
 
       .game-category {
-        display: block;
         margin-top: 6px;
         color: var(--white);
         font-family: var(--font-display);
         font-weight: 700;
-        font-size: 24px;
+        font-size: 30px;
         text-shadow: 0 2px 4px #000;
         width: 100%;
       }
 
       .commentary {
         position: absolute;
-        bottom: 20px;
+        top: 78px;
+        left: 280px;
         margin: auto;
         width: 400px;
 
@@ -122,27 +122,26 @@
 
       ff-nameplate {
         --color: var(--primary-red);
-        height: 75px;
+        height: 90px;
         position: absolute;
-        width: 420px;
+        width: 480px;
       }
 
       #nameplate1 {
-        top: 10px;
-        left: 120px;
+        top: 14px;
+        left: 95px;
       }
 
       #nameplate2 {
-        top: 10px;
-        right: 120px;
+        top: 14px;
+        right: 95px;
       }
 
       ff-timer-box {
         --color: var(--primary-red);
         position: absolute;
-        top: 28px;
+        top: 42px;
         left: 640px;
-        right: 640px;
         width: 320px;
       }
     </style>
@@ -151,8 +150,8 @@
   <body>
     <div class="layout">
       <div class="content">
-        <ff-sized-box id="game1" width="799" height="598"></ff-sized-box>
-        <ff-sized-box id="game2" width="799" height="598"></ff-sized-box>
+        <ff-sized-box id="game1" width="799" height="599"></ff-sized-box>
+        <ff-sized-box id="game2" width="799" height="599"></ff-sized-box>
 
         <div id="top-row">
           <div class="logo-container">
@@ -161,34 +160,34 @@
           </div>
 
           <div class="game-description">
-            <span class="game-title">Super Mario Galaxy</span>
-            <span class="game-category">120 Star</span>
+            <span class="game-title">Donkey Kong 64 &ndash; </span>
+            <span class="game-category">101%</span>
+          </div>
+
+          <div class="commentary">
+            <span class="commentators">
+              Commentators: Xafication, Jag amd more
+            </span>
           </div>
         </div>
 
         <div id="bottom-row">
           <ff-nameplate
             id="nameplate1"
-            class="nameplate--left"
-            name="HardcoreGaming"
-            twitch="HardcoreGaming07"
-            pb="5:37:46"
+            class="nameplate--left nameplate--large"
+            name="Znernicus"
+            twitch="Znernicus"
+            pb="5:42:24"
           ></ff-nameplate>
           <ff-nameplate
             id="nameplate2"
-            class="nameplate--right"
-            name="Claire"
-            twitch="MutantsAbyss"
-            pb="5:49:43"
+            class="nameplate--right nameplate--large"
+            name="icupspeedruns"
+            twitch="icupspeedruns_"
+            pb="5:54:15"
           ></ff-nameplate>
 
           <ff-timer-box></ff-timer-box>
-
-          <div class="commentary">
-            <span class="commentators">
-              Commentators: Alaeus, iMartz3
-            </span>
-          </div>
         </div>
       </div>
 
