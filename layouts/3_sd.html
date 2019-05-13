@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Race Layout, 4 Standard</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../style/layout.css">
+    <script src="./2_sd.js"></script>
+
+    <style>
+      .content {
+        background-color: #222;
+      }
+
+      ff-sized-box {
+        position: absolute;
+        background-color: #000;
+        border: var(--border-primary);
+        z-index: 10;
+      }
+
+      #game1 {
+        top: -2px;
+        left: -2px;
+      }
+
+      #game2 {
+        top: -2px;
+        right: -2px;
+      }
+
+      #game3 {
+        bottom: -2px;
+        right: -2px;
+      }
+
+      #top-row {
+        position: absolute;
+        top: 2px;
+        width: 100%;
+        height: 118px;
+      }
+
+      .details {
+        position: absolute;
+        top: 440px;
+        left: 0px;
+        height: 450px;
+        width: 600px;
+      }
+
+      .logo-container {
+        position: absolute;
+        left: 94px;
+        bottom: 100px;
+        margin: auto;
+        height: 220px;
+        width: 400px;
+        transform: scale(1.6);
+      }
+
+      ff-logo {
+        padding-top: 6px;
+        z-index: 100;
+      }
+
+      .logo-subtitle {
+        color: var(--white);
+        font-family: var(--font-header);
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        text-shadow: 0 2px 4px #000;
+        width: 100%;
+        text-align: center;
+        display: block;
+      }
+
+      .game-description {
+        position: absolute;
+        bottom: -140px;
+        left: 0px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        height: 280px;
+        width: 100%;
+        text-align: center;
+      }
+
+      .game-title {
+        color: var(--white);
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 30px;
+        text-shadow: 0 2px 4px #000;
+        width: 100%;
+      }
+
+      .game-category {
+        margin-top: 6px;
+        color: var(--white);
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 30px;
+        text-shadow: 0 2px 4px #000;
+        width: 100%;
+      }
+
+      .commentary {
+        position: absolute;
+        top: 360px;
+        margin: auto;
+        width: 100%;
+
+        display: block;
+        margin-top: 6px;
+        color: var(--white);
+        font-family: var(--font-display);
+        font-weight: 500;
+        font-size: 18px;
+        text-shadow: 0 2px 4px #000;
+        text-align: center;
+      }
+
+      ff-nameplate {
+        --color: var(--primary-red);
+        height: 90px;
+        position: absolute;
+        width: 400px;
+      }
+
+      #nameplate1 {
+        top: 80px;
+        left: 600px;
+      }
+
+      #nameplate2 {
+        top: 240px;
+        right: 600px;
+      }
+
+      #nameplate3 {
+        bottom: 80px;
+        right: 600px;
+      }
+
+      ff-timer-box {
+        --color: var(--primary-red);
+        position: absolute;
+        top: 540px;
+        left: 640px;
+        width: 320px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="layout">
+      <div class="content">
+        <ff-sized-box id="game1" width="599" height="449"></ff-sized-box>
+        <ff-sized-box id="game2" width="599" height="449"></ff-sized-box>
+        <ff-sized-box id="game3" width="599" height="449"></ff-sized-box>
+
+        <div class="details">
+          <div class="logo-container">
+            <ff-logo></ff-logo>
+            <span class="logo-subtitle">Invitational Series</span>
+          </div>
+
+          <div class="game-description">
+            <span class="game-title">Crash Bandicoot &ndash; </span>
+            <span class="game-category">100%</span>
+          </div>
+
+          <div class="commentary">
+            <span class="commentators">
+              Commentators: Rex, Rabid
+            </span>
+          </div>
+        </div>
+
+        <ff-nameplate
+          id="nameplate1"
+          class="nameplate--left"
+          name="Tebt"
+          twitch="tebt_w"
+          pb="1:03:37"
+        ></ff-nameplate>
+        <ff-nameplate
+          id="nameplate2"
+          class="nameplate--right"
+          name="WhitePaaws"
+          twitch="WhitePaaws"
+          pb="1:05:12"
+        ></ff-nameplate>
+        <ff-nameplate
+          id="nameplate3"
+          class="nameplate--right"
+          name="burgerlands2"
+          twitch="burgerlands2"
+          pb="1:06:22"
+        ></ff-nameplate>
+
+        <ff-timer-box></ff-timer-box>
+      </div>
+    </div>
+  </body>
+</html>
